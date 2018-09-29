@@ -11,3 +11,8 @@ var RoomsView = {
   }
 
 };
+
+$( '#rooms button' ).click(function() {
+  RoomsView.renderRoom(); 
+});
+

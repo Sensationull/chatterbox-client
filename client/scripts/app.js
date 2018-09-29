@@ -17,10 +17,18 @@ var App = {
 
   },
 
+  dataArray: [], 
+
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
       // examine the response from the server request:
-      console.log(data);
+      console.log(data.results);
+      for (var i = 0; i < data.results.length; i ++) {
+        MessagesView.renderMessage(data.results[i]);
+      }
+      //data.results;
+      //App.dataArray.push(data.results);
+      //return data;
 
       callback();
     });
@@ -34,5 +42,10 @@ var App = {
   stopSpinner: function() {
     App.$spinner.fadeOut('fast');
     FormView.setStatus(false);
-  }
+  },
 };
+
+$( '.body' ).click(function() {
+  console.log('This working?');
+});
+
