@@ -6,7 +6,8 @@ var RoomsView = {
   initialize: function() {
   },
 
-  render: function() {
+  renderRoom: function() {
+    RoomsView.$select.append("<option>" + Rooms + "</option>");
   }
 
 };
