@@ -25,6 +25,7 @@ var App = {
       console.log(data.results);
       for (var i = 0; i < data.results.length; i ++) {
         MessagesView.renderMessage(data.results[i]);
+        console.log(data.results[i]);
       }
       //data.results;
       //App.dataArray.push(data.results);

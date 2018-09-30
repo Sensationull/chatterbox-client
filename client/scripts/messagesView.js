@@ -11,8 +11,9 @@ var MessagesView = {
   }, 
 
   renderMessage: function(message) {
-    var currentName = message.username;
-    MessagesView.$chats.append("<div class= 'text'>" + message.text + "</div>" + "<div class = 'username'>" + "<button>" + message.username + "</button>" +  "</div>" +  "<div class = 'roomname'>" + message.roomname + "</div>");
+    var $mes = MessageView.render(message);
+    MessagesView.$chats.append($mes);
+    //MessagesView.$chats.append("<div class= 'text'>" + message.text + "</div>" + "<div class = 'username'>" + "<button>" + message.username + "</button>" +  "</div>" +  "<div class = 'roomname'>" + message.roomname + "</div>");
   }
 };
 
